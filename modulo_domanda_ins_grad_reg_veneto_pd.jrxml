@@ -1,0 +1,2879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final utlizzo versione della libreria JasperReports6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="modulo_domanda_ins_grad_reg_veneto_pls" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="df37bf67-8501-4e02-801a-fdbc809f8b80">
+	<property name="ireport.zoom" value="1.2100000000000053"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="886"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="GRADMED PRD"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="516"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="473"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<subDataset name="V_ST_PLS_ALL_D" uuid="23f12954-a15a-48ee-b59c-aa9e7a5eb796">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_ALL_D s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_NOMINATIVO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NOMINATIVO"/>
+		</field>
+		<field name="DOMA_NAS_LUOGO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_LUOGO"/>
+		</field>
+		<field name="DOMA_NAS_DATA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_DATA"/>
+		</field>
+		<field name="DOMA_PEC" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_PEC"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="DT_ORA_EMISSIONE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DT_ORA_EMISSIONE"/>
+		</field>
+		<field name="N_IDENTIFICATIVO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="N_IDENTIFICATIVO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_ALL_C" uuid="ed052bd2-0e1f-42fe-ad24-c4cc6228e16a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_ALL_C s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_NOMINATIVO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NOMINATIVO"/>
+		</field>
+		<field name="DOMA_NAS_LUOGO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_LUOGO"/>
+		</field>
+		<field name="DOMA_NAS_DATA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_DATA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_FOT_CERT_ALL_C" uuid="1ca88c53-ff03-4634-ab98-4e8b02f33b5e">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_FOT_CERT_ALL_C s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="ENTE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ENTE"/>
+		</field>
+		<field name="DATA_RIF" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_RIF"/>
+		</field>
+		<field name="PROT_RIF" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PROT_RIF"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_ENTI_SG_ALL_B" uuid="f18e5f19-ae26-4089-a76c-834064aaa921">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="501"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="485"/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_ENTI_SG_ALL_B  s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="ENTE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ENTE"/>
+		</field>
+		<field name="INDIRIZZO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="INDIRIZZO"/>
+		</field>
+		<field name="NUMERO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="NUMERO"/>
+		</field>
+		<field name="CAP" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CAP"/>
+		</field>
+		<field name="CITTA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CITTA"/>
+		</field>
+		<field name="PROV" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PROV"/>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TELEFONO"/>
+		</field>
+		<field name="FAX" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+		</field>
+		<field name="NOTE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="NOTE"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_ALL_B" uuid="b0aab4ff-c266-41f8-92e6-e606a0d96335">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_NOMINATIVO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NOMINATIVO"/>
+		</field>
+		<field name="DOMA_NAS_LUOGO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_LUOGO"/>
+		</field>
+		<field name="DOMA_NAS_DATA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_DATA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T8_ALL_B" uuid="67f81274-711a-43a4-b57a-c4079865b30c">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T8_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="MEDICO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="MEDICO"/>
+		</field>
+		<field name="ULSS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ULSS"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T8_SOST_ALL_B" uuid="855aacfb-b25d-49b8-b66d-e885ae1864f0">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T8_SOST_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="ORE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ORE"/>
+		</field>
+		<field name="MEDICO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="MEDICO"/>
+		</field>
+		<field name="ULSS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ULSS"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T9_ALL_B" uuid="0feef920-5f12-4fbd-b4c2-0ad33ce4bed6">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T9_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ANNO"/>
+		</field>
+		<field name="MESE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="MESE"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="ORE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ORE"/>
+		</field>
+		<field name="ULSS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ULSS"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T10_ALL_B" uuid="a3de3f66-15a6-483b-bcd9-ea0832da2c85">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T10_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="ULSS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ULSS"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T11_ALL_B" uuid="576dfd99-74ca-43e9-ab32-35940095b0ef">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T11_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="ULSS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ULSS"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T12_ALL_B" uuid="a6397b51-e12c-4869-bd0b-c6ea5e6e6348">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T12_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="PRESSO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PRESSO"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T13_ALL_B" uuid="412020d0-147a-4bf3-b6df-1f3375739512">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T13_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="PRESSO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PRESSO"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T14_ALL_B" uuid="9751e5fb-66de-4e2d-a589-d431a4684709">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T14_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="PRESSO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PRESSO"/>
+		</field>
+		<field name="ALTRO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="ALTRO"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_AST_T14_ALL_B" uuid="ebc927c1-a942-4d00-bc5d-528a28970813">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_AST_T14_ALL_B s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_DAL"/>
+		</field>
+		<field name="DATA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_AL"/>
+		</field>
+		<field name="PRESSO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PRESSO"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_ALL_A" uuid="37779743-5195-4cd4-9a31-9b358c146063">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_ALL_A s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_NOMINATIVO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NOMINATIVO"/>
+		</field>
+		<field name="DOMA_NAS_LUOGO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_LUOGO"/>
+		</field>
+		<field name="DOMA_NAS_DATA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_DATA"/>
+		</field>
+		<field name="CITTADINANZA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CITTADINANZA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T1_ALL_A" uuid="1072a3f3-530d-46b8-98e7-5d06e418a677">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T1_ALL_A s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="SPECIALIZZAZIONE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SPECIALIZZAZIONE"/>
+		</field>
+		<field name="FREQUENZA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FREQUENZA_DAL"/>
+		</field>
+		<field name="FREQUENZA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FREQUENZA_AL"/>
+		</field>
+		<field name="CONSEGUITO_IL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="CONSEGUITO_IL"/>
+		</field>
+		<field name="INDIRIZZO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="INDIRIZZO"/>
+		</field>
+		<field name="UNIVERSITA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="UNIVERSITA"/>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TELEFONO"/>
+		</field>
+		<field name="FAX" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T2_ALL_A" uuid="3bcb422f-a8f5-4688-8828-43957f34b300">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T2_ALL_A s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="SPECIALIZZAZIONE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SPECIALIZZAZIONE"/>
+		</field>
+		<field name="INDIRIZZO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="INDIRIZZO"/>
+		</field>
+		<field name="UNIVERSITA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="UNIVERSITA"/>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TELEFONO"/>
+		</field>
+		<field name="FAX" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+		</field>
+		<field name="DATA_LAUREA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_LAUREA"/>
+		</field>
+		<field name="FREQUENZA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FREQUENZA_DAL"/>
+		</field>
+		<field name="FREQUENZA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FREQUENZA_AL"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T3_ALL_A" uuid="00567f22-363d-480a-9c23-218e61b95df2">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T3_ALL_A s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="SPECIALIZZAZIONE" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="SPECIALIZZAZIONE"/>
+		</field>
+		<field name="INDIRIZZO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="INDIRIZZO"/>
+		</field>
+		<field name="UNIVERSITA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="UNIVERSITA"/>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TELEFONO"/>
+		</field>
+		<field name="FAX" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+		</field>
+		<field name="DATA_LAUREA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_LAUREA"/>
+		</field>
+		<field name="FREQUENZA_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FREQUENZA_DAL"/>
+		</field>
+		<field name="FREQUENZA_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FREQUENZA_AL"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T4_ALL_A" uuid="e2c99031-466c-4c37-9fe4-93c341562323">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T4_ALL_A s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_CONS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_CONS"/>
+		</field>
+		<field name="PRESSO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PRESSO"/>
+		</field>
+		<field name="INDIRIZZO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="INDIRIZZO"/>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TELEFONO"/>
+		</field>
+		<field name="FAX" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_T5_ALL_A" uuid="dd7baf55-ccf0-429d-848d-d81bd2ef528e">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="REG_GRADMED TEST"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from V_ST_PLS_T5_ALL_A s
+where s.cod_domanda=$P{cod_domanda}]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="DOMA_ANNO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+		</field>
+		<field name="FLG_A" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_A"/>
+		</field>
+		<field name="FLG_B" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FLG_B"/>
+		</field>
+		<field name="DATA_CONS" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="DATA_CONS"/>
+		</field>
+		<field name="PRESSO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PRESSO"/>
+		</field>
+		<field name="INDIRIZZO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="INDIRIZZO"/>
+		</field>
+		<field name="TELEFONO" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TELEFONO"/>
+		</field>
+		<field name="FAX" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="FAX"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_A4_ANAGRAFICA" uuid="04cf9b0f-f335-4c32-8eea-eda387c6cc7a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DiGRADMED PRD"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from v_st_pls_a4_anagrafica s
+where s.cod_domanda=$P{cod_domanda} AND s.TITL_CODTIT = 2]]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="PROVINCIA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PROVINCIA"/>
+		</field>
+		<field name="TITL_PERIODO_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_DAL"/>
+		</field>
+		<field name="TITL_PERIODO_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_AL"/>
+		</field>
+		<field name="TITL_CODTIT" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_CODTIT"/>
+		</field>
+		<field name="TITL_PERIODO_DAL2" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_DAL2"/>
+		</field>
+		<field name="TITL_PERIODO_AL2" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_AL2"/>
+		</field>
+		<field name="TITL_PERIODO_DAL3" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_DAL3"/>
+		</field>
+		<field name="TITL_PERIODO_AL3" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_AL3"/>
+		</field>
+	</subDataset>
+	<subDataset name="V_ST_PLS_A5_ANAGRAFICA" uuid="98c02f05-0ac4-4b3c-91ee-5c2e028c7cdb">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="gradmed_usr_prd"/>
+		<parameter name="cod_domanda" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from v_st_pls_a5_anagrafica s
+where s.cod_domanda=$P{cod_domanda}
+and s.titl_codtit = '2']]>
+		</queryString>
+		<field name="COD_DOMANDA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+		</field>
+		<field name="PROVINCIA" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="PROVINCIA"/>
+		</field>
+		<field name="TITL_PERIODO_DAL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_DAL"/>
+		</field>
+		<field name="TITL_PERIODO_AL" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_AL"/>
+		</field>
+		<field name="TITL_CODTIT" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_CODTIT"/>
+		</field>
+		<field name="TITL_PERIODO_DAL2" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_DAL2"/>
+		</field>
+		<field name="TITL_PERIODO_AL2" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_AL2"/>
+		</field>
+		<field name="TITL_PERIODO_DAL3" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_DAL3"/>
+		</field>
+		<field name="TITL_PERIODO_AL3" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="TITL_PERIODO_AL3"/>
+		</field>
+	</subDataset>
+	<parameter name="cod_domanda" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from V_ST_PLS_ANAGRAFICA  s
+where s.cod_domanda=$P{cod_domanda}]]>
+	</queryString>
+	<field name="COD_DOMANDA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="COD_DOMANDA"/>
+	</field>
+	<field name="DOMA_ANNO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO"/>
+	</field>
+	<field name="DOMA_ANNO_STESURA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO_STESURA"/>
+	</field>
+	<field name="DOMA_SCADENZA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_SCADENZA"/>
+	</field>
+	<field name="DOMA_SCADENZA_LETT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_SCADENZA_LETT"/>
+	</field>
+	<field name="DOMA_SCAD_PRES" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_SCAD_PRES"/>
+	</field>
+	<field name="DOMA_SCAD_PRES_LETT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_SCAD_PRES_LETT"/>
+	</field>
+	<field name="DOMA_NOMINATIVO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_NOMINATIVO"/>
+	</field>
+	<field name="DOMA_NAS_LUOGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_LUOGO"/>
+	</field>
+	<field name="DOMA_NAS_PROV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_PROV"/>
+	</field>
+	<field name="DOMA_NAS_DATA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_NAS_DATA"/>
+	</field>
+	<field name="DOMA_SESSO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_SESSO"/>
+	</field>
+	<field name="DOMA_CODFISC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_CODFISC"/>
+	</field>
+	<field name="DOMA_RESID_LUOGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_RESID_LUOGO"/>
+	</field>
+	<field name="DOMA_RESID_PROV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_RESID_PROV"/>
+	</field>
+	<field name="DOMA_RESID_INDIR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_RESID_INDIR"/>
+	</field>
+	<field name="DOMA_RESID_CAP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_RESID_CAP"/>
+	</field>
+	<field name="DOMA_RESID_TEL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_RESID_TEL"/>
+	</field>
+	<field name="DOMA_ULSS_RESID_AZI" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_ULSS_RESID_AZI"/>
+	</field>
+	<field name="DOMA_MAIL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_MAIL"/>
+	</field>
+	<field name="DOMA_PEC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PEC"/>
+	</field>
+	<field name="FLG_MED_CONV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_MED_CONV"/>
+	</field>
+	<field name="DATA_MED_CONV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DATA_MED_CONV"/>
+	</field>
+	<field name="DOMA_LAUR_UNIV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_LAUR_UNIV"/>
+	</field>
+	<field name="DOMA_LAUR_DATA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_LAUR_DATA"/>
+	</field>
+	<field name="DOMA_LAUR_VOTO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_LAUR_VOTO"/>
+	</field>
+	<field name="DOMA_LAUR_VOTOMAX" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_LAUR_VOTOMAX"/>
+	</field>
+	<field name="DOMA_LAUR_LODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_LAUR_LODE"/>
+	</field>
+	<field name="DOMA_AB_UNIV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_AB_UNIV"/>
+	</field>
+	<field name="DOMA_ANNO_ABILITAZIONE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_ANNO_ABILITAZIONE"/>
+	</field>
+	<field name="DOMA_ABILITAZIONE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_ABILITAZIONE"/>
+	</field>
+	<field name="FLG_DIPLOMA_SI" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_DIPLOMA_SI"/>
+	</field>
+	<field name="FLG_DIPLOMA_SI_PEDIATRIA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_DIPLOMA_SI_PEDIATRIA"/>
+	</field>
+	<field name="FLG_DIPLOMA_SI_DISCIPLINA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_DIPLOMA_SI_DISCIPLINA"/>
+	</field>
+	<field name="DESC_DISCIPLINA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DESC_DISCIPLINA"/>
+	</field>
+	<field name="DOMA_PD_UNIV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_UNIV"/>
+	</field>
+	<field name="DOMA_PD_DATA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_DATA"/>
+	</field>
+	<field name="DOMA_PD_VOTO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_VOTO"/>
+	</field>
+	<field name="DOMA_PD_VOTOMAX" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_VOTOMAX"/>
+	</field>
+	<field name="DOMA_PD_LODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_LODE"/>
+	</field>
+	<field name="DOMA_PD_FREQ_DAL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_FREQ_DAL"/>
+	</field>
+	<field name="DOMA_PD_FREQ_AL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_PD_FREQ_AL"/>
+	</field>
+	<field name="FLG_DIPLOMA_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_DIPLOMA_NO"/>
+	</field>
+	<field name="FLG_DIPLOMA_NO_PEDIATRIA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_DIPLOMA_NO_PEDIATRIA"/>
+	</field>
+	<field name="FLG_DIPLOMA_NO_DISCIPLINA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_DIPLOMA_NO_DISCIPLINA"/>
+	</field>
+	<field name="FLG_SERV_MILITARE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_SERV_MILITARE"/>
+	</field>
+	<field name="DAL_SERV_MILITARE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DAL_SERV_MILITARE"/>
+	</field>
+	<field name="AL_SERV_MILITARE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="AL_SERV_MILITARE"/>
+	</field>
+	<field name="CO_SERV_MILITARE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CO_SERV_MILITARE"/>
+	</field>
+	<field name="FLG_PROVV_REVOCA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_PROVV_REVOCA"/>
+	</field>
+	<field name="DATA_PROVV_REVOCA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DATA_PROVV_REVOCA"/>
+	</field>
+	<field name="ULSS_PROVV_REVOCA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ULSS_PROVV_REVOCA"/>
+	</field>
+	<field name="FLG_PV_INF_DATI_PERS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_PV_INF_DATI_PERS"/>
+	</field>
+	<field name="FLG_CONS_INF_DATI_PERS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_CONS_INF_DATI_PERS"/>
+	</field>
+	<field name="DATA_MATURATI_AL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DATA_MATURATI_AL"/>
+	</field>
+	<field name="N_ALLEGATO_A" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="N_ALLEGATO_A"/>
+	</field>
+	<field name="N_ALLEGATO_B" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="N_ALLEGATO_B"/>
+	</field>
+	<field name="N_ALLEGATO_C" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="N_ALLEGATO_C"/>
+	</field>
+	<field name="N_CERTIFICAZIONI" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="N_CERTIFICAZIONI"/>
+	</field>
+	<field name="FLG_INDIRIZZATA_RES" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_INDIRIZZATA_RES"/>
+	</field>
+	<field name="FLG_INDIRIZZATA_DOM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FLG_INDIRIZZATA_DOM"/>
+	</field>
+	<field name="DOMA_DOMIC_CO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_DOMIC_CO"/>
+	</field>
+	<field name="DOMA_DOMIC_LUOGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_DOMIC_LUOGO"/>
+	</field>
+	<field name="DOMA_DOMIC_PROV" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_DOMIC_PROV"/>
+	</field>
+	<field name="DOMA_DOMIC_INDIR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_DOMIC_INDIR"/>
+	</field>
+	<field name="DOMA_DOMIC_CAP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_DOMIC_CAP"/>
+	</field>
+	<field name="DOMA_DOMIC_TEL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DOMA_DOMIC_TEL"/>
+	</field>
+	<group name="1"/>
+	<group name="Gruppo1">
+		<groupHeader>
+			<band height="81">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="30" uuid="d75a57e9-d09b-4853-a0c5-af3bbe9135f4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["P R E S E N T A"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="30" width="534" height="30" uuid="f96497ba-5c71-45f3-bcee-c6fc7e435187">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">"+
+"ai sensi del comma 4 dell'art. 33 dell'ACN 15/12/2005, come introdotto "+
+"dall'ACN del 21/06/2018 (Rep. Atti n. 113/CSR), la seguente: "+
+"</style>"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="60" width="534" height="20" uuid="66d47030-597c-4bcd-a0c0-bcbbf60f726d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{FLG_DIPLOMA_SI}!=null && $F{FLG_DIPLOMA_SI}.equals("1")?"[X]":"[]")+
+"<style isBold=\"true\">"+
+" DOMANDA di TRASFERIMENTO, secondo quanto previsto dall'art.33, co.5, "+
+"lett. a), "+
+"</style>"+
+"dell'ACN 15/12/2005 e smi, come introdotto dall'ACN del 21/06/2018 "+
+"[UNICAMENTE PER I PEDIATRI CONVENZIONATI PRESSO LA REGIONE VENETO]"+
+"<br/><br/>"+
+($F{FLG_DIPLOMA_SI}!=null && $F{FLG_DIPLOMA_SI}.equals("1")?"[X]":"[]")+
+"<style isBold=\"true\">"+
+" DOMANDA di TRASFERIMENTO, secondo quanto previsto dall'art.33, co.5, "+
+"lett. b), "+
+"</style>"+
+"dell'ACN 15/12/2005 e smi, come introdotto dall'ACN del 21/06/2018 "+
+"[UNICAMENTE PER I PEDIATRI CONVENZIONATI PRESSO ALTRA REGIONE]"+
+"<br/><br/>"+
+($F{FLG_DIPLOMA_SI}!=null && $F{FLG_DIPLOMA_SI}.equals("1")?"[X]":"[]")+
+"<style isBold=\"true\">"+
+" DOMANDA di INSERIMENTO, secondo quanto previsto dall'art.33, co.5, "+
+"lett. c), "+
+"</style>"+
+"dell'ACN 15/12/2005 e smi, come introdotto dall'ACN del 21/06/2018 "+
+"[UNICAMENTE PER I PEDIATRI INSERITI NELLA GRADUATORIA REGIONALE DEL "+
+"VENETO 2019, pubblicata nel Bollettino Ufficiale della Regione Veneto "+
+"n. 2 del 4/01/2019]"+
+"<br/><br/>"+
+($F{FLG_DIPLOMA_SI}!=null && $F{FLG_DIPLOMA_SI}.equals("1")?"[X]":"[]")+
+"<style isBold=\"true\">"+
+" DOMANDA di ASSEGNAZIONE per SPECIALIZZATI, secondo quanto previsto" + "dall'art.33, co.5, lett. d), "+
+"</style>"+
+"dell'ACN 15/12/2005 e smi, come introdotto dall'ACN del 21/06/2018 "+
+"[UNICAMENTE PER I PEDIATRI CHE ABBIANO ACQUISITO IL DIPLOMA DI "+
+"SPECIALIZZAZIONE IN PEDIATRIA O DISCIPLINE EQUIPOLLENTI AI SENSI "+
+"DELLA TABELLA B DEL D.M. 30 GENNAIO 1998 E SMI SUCCESSIVAMENTE ALLA "+
+"DATA DI SCADENZA DELLA PRESENTAZIONE DELLA DOMANDA DI INCLUSIONE IN "+
+"GRADUATORIA REGIONALE VALIDA PER L'ANNO 2019, AUTOCERTIFICANDONE IL "+
+"POSSESSO ALL'ATTO DELLA PRESENTAZIONE DELLA DOMANDA]"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Gruppo2">
+		<groupHeader>
+			<band height="120">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="70" width="534" height="25" uuid="422a0d2e-cb71-4664-87e0-36f085ab3365">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom" markup="none">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["D I C H I A R A"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="30" uuid="34084c4d-0899-43e2-8cbd-e86eaca6c694">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["per l'assegnazione degli incarichi nelle seguenti ambiti territoriali "+
+"carenti di pediatria di libera scelta, pubblicati nel BUR della Regione "+
+"Veneto n. -- del --"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="37" width="534" height="20" uuid="7af08962-d1d6-4d50-af36-5e427f56220d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["A tal fine, ai sensi degli articoli 46 e 47 del DPR n. 445/2000 e smi "+
+"consapevole delle responsabilità amministrative e penali conseguenti a "+
+"dichiarazioni mendaci, così come previsto dall'art. 76 del DPR n. "+
+"445/2000 e smi (3-4),"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="95" width="534" height="24" uuid="36ca72ae-bd75-47c7-a0d4-4e90b74d049a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">"+
+"DOMANDA DI TRASFERIMENTO (da Regione Veneto)<br/>"+
+"</style>"+
+"e "+
+"<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">"+
+"DOMANDA DI TRASFERIMENTO (da altra Regione)<br/>"+
+"</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Gruppo3"/>
+	<group name="Gruppo4"/>
+	<group name="Gruppo5">
+		<groupHeader>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="36ea7918-ee03-4f7b-914e-923052983aa0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["aver conseguito il diploma di specializzazione in pediatria o "+
+"discipline equipollenti ai sensi della tabella B del D.M. "+
+"30/01/1998 e smi, in data <style isUnderline='true'>"+
+($F{DOMA_LAUR_DATA}!=null && !$F{DOMA_LAUR_DATA}.equals("")?$F{DOMA_LAUR_DATA}:"")+
+"</style> presso l’Università degli Studi di <style isUnderline='true'>"+
+($F{DOMA_LAUR_UNIV}!=null && !$F{DOMA_LAUR_UNIV}.equals("")?$F{DOMA_LAUR_UNIV}:"")+
+"</style> con voto <style isUnderline='true'>"+
+($F{DOMA_LAUR_VOTO}!=null && !$F{DOMA_LAUR_VOTO}.equals("")?$F{DOMA_LAUR_VOTO}:"")+"/"+
+($F{DOMA_LAUR_VOTOMAX}!=null && !$F{DOMA_LAUR_VOTOMAX}.equals("")?$F{DOMA_LAUR_VOTOMAX}:"")+" "+
+($F{DOMA_LAUR_LODE}!=null && !$F{DOMA_LAUR_LODE}.equals("")?("E LODE"):"")+"</style>;"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="af545ed8-60dd-43bd-a660-86e5941fc9e9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="2b838313-b7e7-4e98-b2c3-6c013e7fe71f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="e5288f8a-4006-481a-83d8-348f6ce5f05f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ESSERE CONVENZIONATO per la pediatria di libera scelta dal -- nella Regione -- presso l'Azienda U.L.S.S. n. -- di --, - Ambito territoriale di -- Comune --;"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="ac4e0c0e-4fa9-4b39-838a-fdd992e027c2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ESSERE ATTUALMENTE ISCRITTO negli elenchi dei medici convenzionati "+
+"per l'Emergenza Sanitaria Territoriale dell'azienda ULSS n. -- di -- "+
+"Ambito territoriale di -- Comune -- della Regione -- dal --;"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="227007a1-1554-48fa-ba74-4f75e75624dd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["3."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="6df167a6-9180-4c5b-8869-b9aac480b8cc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["4."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="f1d391c6-c3ba-4d1f-9b84-b46595e9e8b6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{FLG_PROVV_REVOCA}!=null && $F{FLG_PROVV_REVOCA}.equals("1")?"[X]":"[]")+
+"di AVER AVUTO sospensioni dall'incarico ai sensi dell'art. 18, comma 1 "+
+"dell'ACN vigente (ossia per. provvedimenti disciplinari, sospensione "+
+"dall'Albo, servizio militare/servizio civile sostitutivo/servizio "+
+"prestato all'estero ai sensi della L. n. 125/2014, provvedimenti dell' "+
+"Autorità Giudiziaria che impediscono il corretto svolgimento dell'"+
+"attività convenzionata di studio e domiciliare)<br/>dal -- al --"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Gruppo7"/>
+	<group name="Gruppo8"/>
+	<group name="Gruppo6">
+		<groupHeader>
+			<band height="45">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="24" width="20" height="20" uuid="f9df92af-a3b0-4b2e-a18d-4d195767176f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="24" width="514" height="20" uuid="024af670-b243-470a-8492-34354f3667d0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ESSERE inserito nella graduatoria della Regione Veneto 2019, "+
+"pubblicata nel Bollettino Ufficiale della Regione Veneto n.2 del "+
+"04/01/2019, con punteggio di --"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="24" uuid="fe637eb9-97bf-4a88-a37f-95a557f107d1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">"+
+"DOMANDA DI INSERIMENTO, secondo quanto previsto dall'art.33, co.5, lett c"+
+"</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="15" uuid="2111ed73-fb82-4bd6-a83a-7778f07d1e92">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="15" uuid="957bb3ca-dbcf-4e41-ad4a-20c6ce247310">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di AVER conseguito il conseguito il diploma di specializzazione "+
+"in pediatria o discipline equipollenti ai sensi della tabella B del D.M. "+
+"20/01/1998 e smi in data "+
+"<style isUnderline='true'>"+
+($F{DOMA_ANNO_ABILITAZIONE}!=null && !$F{DOMA_ANNO_ABILITAZIONE}.equals("")?$F{DOMA_ANNO_ABILITAZIONE}:"")+
+"</style>, presso l'Università di <style isUnderline='true'>"+
+($F{DOMA_AB_UNIV}!=null &&
+!$F{DOMA_AB_UNIV}.equals("")?$F{DOMA_AB_UNIV}:"")+
+"</style> con voto <style isUnderline='true'>"+
+($F{DOMA_ABILITAZIONE}!=null && !$F{DOMA_ABILITAZIONE}.equals("")?$F{DOMA_ABILITAZIONE}:"")+
+ "</style>;"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="34165e9e-8e55-422b-9f72-a9df7a5a3c58">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["3."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="c3d7c986-447a-401a-8b68-2f334a8112dc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ESSERE RESIDENTE nel Comune di (*) -- prov. --, nell'ambito/"+
+"circoscrizione di --, dal"+
+($F{DOMA_PD_FREQ_DAL}!=null && !$F{DOMA_PD_FREQ_DAL}.equals("")?$F{DOMA_PD_FREQ_DAL}:"")+
+" (*) nel caso di Comuni suddivisi in Circoscrizioni, oltre al Comune "+
+"indicare anche la Circoscrizione di Residenza."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="cc550bb5-710b-4b35-a9c7-1f500d822703">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["4."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="ba5416d9-6c22-455c-9e5a-631c82f3c827">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Qualora la residenza nel Comuneattuale sia stata acquisita "+
+"successivamente al 31/01/2016, dichiara, inoltre:<br/>"+
+"di ESSERE STATO RESIDENTE alla data del 31/01/2016 e fino al --, nel "+
+"comune di -- prov. --"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="6431eeef-e616-4cf0-aad5-53b68039c5a5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["5."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="e6580c1b-dd11-4020-ad90-25a5da83bb2c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ESSERE ATTUALMENTE a tempo indeterminato per pediatria di libera "+
+"scelta dal -- con Codice regionale n. -- presso l'Azienda ULSS n- -- "+
+"di -- Ambito territoriale di -- Comune -- della Regione --"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="a623def7-4f93-49f8-bf1a-0ca7ec5ece8d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["6."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="0070336b-6679-47c2-88db-a6b121b7d811">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di NON ESSERE CONVENZIONATO AL 31/01/2018 a tempo indeterminato per la "+
+"pediatria di libera scelta"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="3c4aa0bf-a3ed-40e8-ad8e-e299103b37d3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["7."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="5d6c803b-bd4d-4b27-9e66-8e52ece45710">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di NON ESSERE ATTUALMENTE CONVENZIONATO a tempo indeterminato per la "+
+"pediatria di libera scelta"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="30">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="1" y="2" width="534" height="28" uuid="e2e22099-1996-4895-ba61-bfff619c4e1a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">"+
+"DOMANDA DI ASSEGNAZIONE, secondo quanto previsto dall'art.33, co.5, "+
+"lett d"+
+"</style><style size='10'><br/>"+
+"A tale proposito si presti particolare attenzione a quanto riportato "+
+"nelle Avvertenze Generali."+
+"</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="25">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="2" width="514" height="20" uuid="0c67b719-3d6e-4682-856c-e40f479f1bf9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di AVER conseguito il diploma di specializzazione in "+
+($F{FLG_DIPLOMA_SI_PEDIATRIA}!=null && $F{FLG_DIPLOMA_SI_PEDIATRIA}.equals("1")?"[X] pediatria":"[] pediatria")+
+($F{FLG_DIPLOMA_SI_DISCIPLINA}!=null && $F{FLG_DIPLOMA_SI_DISCIPLINA}.equals("1")?", [X] disciplina equipollente a pediatria":", [] disciplina equipollente a pediatria")+
+" (specificare) <style isUnderline='true'>"+
+($F{DESC_DISCIPLINA}!=null && !$F{DESC_DISCIPLINA}.equals("")?$F{DESC_DISCIPLINA}:"")+
+"</style> ai sensi della tabella B del D.M. 30/01/2018e smi DOPO la data "+
+"di scadenza della presentazione della domanda di inclusione in "+
+"graduatoria regionale 2019, in data <style isUnderline='true'>"+
+($F{DOMA_PD_DATA}!=null && !$F{DOMA_PD_DATA}.equals("")?$F{DOMA_PD_DATA}:"")+
+"</style> presso l'Università degli Studi di <style isUnderline='true'>"+
+($F{DOMA_PD_UNIV}!=null && !$F{DOMA_PD_UNIV}.equals("")?$F{DOMA_PD_UNIV}:"")+
+"</style> con voto <style isUnderline='true'>"+
+($F{DOMA_PD_VOTO}!=null && !$F{DOMA_PD_VOTO}.equals("")?$F{DOMA_PD_VOTO}:"")+"/"+
+($F{DOMA_PD_VOTOMAX}!=null && !$F{DOMA_PD_VOTOMAX}.equals("")?$F{DOMA_PD_VOTOMAX}:"")+" "+
+($F{DOMA_PD_LODE}!=null && !$F{DOMA_PD_LODE}.equals("")?("E LODE"):"")+
+"</style>"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="2" width="20" height="20" uuid="133947ba-38db-4c51-a407-5e440c3e8401">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="25">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="2" width="514" height="20" uuid="34be7d28-dc8e-418e-a396-f9db1ab9a08f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ESSERE RESIDENTE nella Regione --, nel Comune di -- prov. --, nell'"+
+"ambito/circoscrizione di -- dal --"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="2" width="20" height="20" uuid="33baa3e3-662e-4ceb-9a8d-9fd7b1233953">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22"/>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="22" y="0" width="514" height="20" uuid="34a14c17-c042-4e68-81da-0e80aa2775e3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{FLG_PROVV_REVOCA}!=null && $F{FLG_PROVV_REVOCA}.equals("1")?"[X]":"[]")+
+" di AVERE subito provvedimenti di revoca o decadenza del rapporto "+
+"convenzionale ai sensi dell'ACN vigente, sansione -- periodo -- ASL --"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="536" height="20" uuid="b621a79a-ab98-4b75-8d4b-6e1907ec6afb">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di IMPEGNARSI a comunicare tempestivamente radiazione/provvedimenti "+
+"sospensivi del rapporto convenziale qualora intervenissero successivamente alla trasmissiobe della presente domanda,"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="536" height="20" uuid="862f26a6-bc4f-4e0f-b46d-17aac673c4ab">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["DI AVER PRESO VISIONE DELL'INFORMATIVA SOTTOSTANTE IN MATERIA DI PROVACY "+
+"E DI ESPRIMETE il proprio consenso al trattamento dei dati personali, ai "+
+"sensi del Regolamento Europeo n. 679/2016 e normativa nazionale di "+
+"riferimento in particolare D.Lgs n. 196/2003 e il D.Lgs n. 101/2018, ai "+
+"fini della gestione della presente procedura e degli adempimenti "+
+"conseguenti"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="50">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="1" y="0" width="534" height="40" uuid="732c8f4f-15e9-47eb-afa3-b6c013e60315">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom" markup="styled">
+						<font fontName="SansSerif" size="16" isBold="true" isUnderline="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["AVVERTENZE GENERALI"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="d3cb8c6f-45da-4d38-95f0-b1ea81ecd6d0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Le domande per il conferimento degli incarichi vacanti di Emergenza Sanitaria Territoriale, dovranno essere spedite a mezzo raccomandata A/R o a mezzo PEC nominale, alla AZIENDA ZERO, U.O.C. Gestione Risorse Umane, Passaggio Gaudenzio, 1. 35100 - PADOVA, PEC: protocollo.azero@pecveneto.it, <style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">entro e non oltre il 20° giorno successivo alla data di pubblicazione del B.U.R.V. del presente avviso.</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="a9a34847-ab26-4121-be3e-691905c0caa4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<br/><style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">Per informazioni telefonare ai numeri 049/8778261-8778682,<br/>Sito Internet => www.azero.veneto.it<br/>Email => medicina.convenzionata@azero.veneto.it</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Gruppo10">
+		<groupHeader>
+			<band height="22">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="1" width="534" height="20" uuid="dc7f4a02-e519-437a-8c01-8b3c79752d83">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<br/>La attuazione della L.R. n. 19/2016 e della DGR n. 2175 del 29/12/2017 'Trasferimento all'Azienda Zero delle attività connesse alle funzioni di cui alla DGR n. 733/2017 (...)', la procedura di assegnazione degli incarichi vacanti di Emergenza Sanitaria Territoriale è stata affidata all'U.O.C. Gestione Risorse Umane di Azienda Zero che, pertanto, provvederà all'individuazione degli aventi diritto secondo criteri di cui all'art.92 dell'ACN per la Medicina Generale 23/03/2005 e smi, come modificato dall'ACN 21/06/2018, per conto di tutte le Aziende ULSS del Veneto, che rimangono competenti per l'adozione del provvedimento di conferimento dell'incarico."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="35">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="35" uuid="50121108-b01f-40c4-8b89-df809c32e979">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+						<font fontName="SansSerif" size="13" isBold="false" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<br/>Si evidenzia che gli interessati dovranno inviare un'unica domanda conforme al presente schema, disponibile anche presso le Aziende UU.LL.SS.SS. e gli Ordini dei Medici del Veneto,<style isUnderline='true' pdfFontName=\"Helvetica-Bold\"> indicando sulla busta della raccomandata/nell'oggetto della PEC</style> la seguente dicitura in base all'opzione effettuata:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="535405d9-221f-41e0-96a5-d16d1d5b6ee6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["1)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="4d6a4e50-373a-454d-9bb6-906ad509db8b">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"Domanda di Trasferimento (da Regione Veneto) - incarichi vacanti di Emergenza Sanitaria Territoriale;</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="1d9307c6-622a-4e5a-bfe8-2bb60456409a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["2)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="bf4609bd-577f-403c-a7b5-83930b7e4c63">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"Domanda di Trasferimento (da altra Regione) - incarichi vacanti di Emergenza Sanitaria Territoriale;</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="2c018990-3cb5-4610-98b7-231c72f1e022">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["3)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="517fb6ca-ab77-4e24-8f5f-97ec7c123dd5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"Domanda di Inserimento - incarichi vacanti di Emergenza Sanitaria Territoriale;</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="20" height="20" uuid="a4272601-7580-448e-a603-293890c44c72">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["4)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="20" y="0" width="514" height="20" uuid="5bb32ad8-582a-4af2-b64a-2bab0de62352">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"Domanda di IAssegnazione per Diplomati - incarichi vacanti di Emergenza Sanitaria Territoriale;</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="30">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="18a04844-6704-416d-a752-901fb6509c2a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"Si sottolinea, inoltre, che nel caso di invio a mezzo PEC devono obbligatoriamente essere compilati/dichiarati i ounti n. 1-2-3 della domanda.</style>Si raccomanda di scrivere in stampatello"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="40">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="40" uuid="4a338f7c-2109-4a05-932e-98bbdf422d31">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="9" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\" isBold=\"true\">"+
+"NOTA BENE</style><br/>L'art. 92 comma 7 dell'ACN per la medicina generale 23/03/2005, "+
+"<style pdfFontName=\"Helvetica-Bold\" isBold=\"true\">"+
+"come introdotto dall'ACN 21/06/2018 </style>"+
+"prevede che i medici già titolari di incarico di Emergenza Sanitaria Territoriale a tempo indeterminato possono concorrere all'assegnazione solo per trasferimento."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="25">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="674f07f3-a4a6-432c-b610-66761ae0da83">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="9.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">"+
+"Premesso ciò, possono concorrere al conferimento degli incarichi:</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="7220429b-f9de-4d21-8613-c0b8202e696d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["1)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="ec529f0c-5f86-4f8e-b571-d916e9803629">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["per Trasferimento - PLS già convenzionati in regione Veneto:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="ec2fa643-9838-4584-b03b-876dc872a02f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri che risultano già "+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"iscritti in uno degli elenchi dei pediatri convenzionati per la pediatria di libera scelta della Regione Veneto/style> "+
+"a condizione che risultino iscritti da almeno quattro anni e che al momento dell'attribuzione del nuovo incarico non svolgano altre attività a qualsiasi titolo nell'ambito del Servizio sanitario nazionale. La data cui far riferimento per la maturazione degli anni di iscrizione negli elenchi di provenienza è quella della scadenza del termine per la presentazione della domanda utile ad ottenere il trasferimento della zona carente.<br/>Detti aspiranti sono graduati in base all'anzianità complessiva di iscrizione negli elenchi, detratti i periodi di eventuale sospensione dall'incarico. In caso di pari posizione gli stessi sono graduati nell'ordine della anzianità di specializzazione, del voto di specializzazione, e della minore età."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="788d2e91-7235-4265-ab50-e7f3ffb53050">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["2)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="71fbb94b-dd85-4448-8972-c881cd2a7db1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["per Trasferimento - PLS già convenzionati in altra Regione:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="6db856b3-953d-407d-b363-7b885bb904b3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri che risultano già "+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"iscritti in uno degli elenchi dei pediatri convenzionati per la pediatria di libera scelta di altra Regione</style> "+
+"a condizione che risultino iscritti da almeno quattro anni e che al momento dell'attribuzione del nuovo incarico non svolgano altre attività a qualsiasi titolo nell'ambito del Servizio sanitario nazionale. La data cui far riferimento per la maturazione degli anni di iscrizione negli elenchi di provenienza è quella della scadenza del termine per la presentazione della domanda utile ad ottenere il trasferimento della zona carente.<br/>Detti aspiranti sono graduati in base all'anzianità complessiva di iscrizione negli elenchi, detratti i periodi di eventuale sospensione dall'incarico. In caso di pari posizione gli stessi sono graduati nell'ordine della anzianità di specializzazione, del voto di specializzazione, e della minore età."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="5d26fddf-2597-4319-8b8a-589f6dfc67a1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["3)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="688765ca-2401-4967-8835-d688cca9cfcd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["per Graduatoria:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="3e9a57ab-f1be-4ec0-977a-322b199552fa">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i medici iscritti nella graduatoria regionale per la pediatria di libera scelta "+
+($F{DOMA_ANNO}!=null && !$F{DOMA_ANNO}.equals("")?$F{DOMA_ANNO}:"")+
+", pubblicata nel bollettino Ufficiale della Regione Veneto n.2 del 4/01/2019.<br/>Per tale fattispecie, ai senti dell'art. 33, comma 6, dell'ACN per la disciplina dei rapporti con i medici pediatri di libera scelta, reso esecutivo con intesa tra Stato-Regioni in data 15/12/2005 e smi, come introdotto dall'ACN 21/06/2018, i pediatri aspiranti all'incarico sono graduati nell'ordine risultante dai seguenti criteri:<br/>►attribuzione del "+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"punteggio</style> riportato nella "+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"graduatoria regionale di cui all'art. 15</style>;<br/>►attribuzione di "+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"punti 6</style> a coloro che nell'ambito territoriale dichiarati carente per il quale concorrono abbiano la residenza fin da due anni antecedenti la scadenza del termine per la presentazione della domanda di inclusione nella graduatoria regionale e che tale requisito abbiano mantenuto fino alla attribuzione dell'incarico;<br/>►attribuzione di "+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"punti 10</style> ai pediatri residenti nell'ambito della Regione veneto da almeno due anni antecedenti la scadenza del termine di presentazione della domanda di inclusione nella graduatoria regionale e che tale requisito abbiano mantenuto fino all'attribuzione dell'incarico.<br/>In caso di pari posizione gli stessi sono graduati nell'ordine della anzianità di specializzazione, del voto di specializzazione e della minore età."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="6e366c9a-d40b-4287-ad35-309baaf1e5a0">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["4)"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="8abb6def-9be5-479f-ab81-5ddd5e2d17e9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["per ASSEGNAZIONE per SPECIALIZZATI:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="04b0c3d3-b19d-4fd2-a540-c701351b2b61">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri che abbiano conseguito il diploma di specializzazione in pediatria o discipline equipollenti ai sensi della tabella B del D.M. 30/01/1998 e smi successivamente alla data della presentazione della domanda di inclusione in graduatoria regionale valida per l'anno 2020, autocertificandone il possesso all'atto della presentazione della presente domanda.<br/>Non rientrano in questa categoria i pediatri che hanno acquisito il diploma di specializzazione successivamente alla data di scadenza della presentazione della domanda di inclusione in graduatoria regionale valida  per l'anno 2020 e che hanno già presentato domanda alla riapertura dei termini del 15/09/2018 in quanto rientrano nella fattispecie di cui al precedente punto 03.<br/>Detti aspiranti sono graduati nell'ordine dell'anzianità di specializzazione, del voto di specializzazione e della minore età, con priorità di interpello per i residenti nell'ambito carente, nell'Azienda, in seguito nella Regione e da ultimo da fuori Regione."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="35">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="35" uuid="888a2473-a882-4b78-b836-7b49fb2661df">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+						<font fontName="SansSerif" size="11" isBold="false" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Gli aspiranti vengono inerpellati nel seguente ordine:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="7e9f995e-de07-4793-8256-038394eac27e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="8faf28d0-ad36-442c-87a5-f6b4b14b63cf">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri di cui al punto '01',"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="7d18c9e4-3334-4844-9d53-c8cf47f07800">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="67ceaa27-9ec7-45fc-8b49-20231270b270">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri di cui al punto '02',"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="391050e8-d351-47bb-a052-97840cfc1cef">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="4792dc6d-3494-4c0b-9ac3-a791e7b07557">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri di cui al punto '03',"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="7232fac0-78f8-4084-8fb6-1d1386860560">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="06d50dc9-3dcc-47c8-b901-2ee3db5c4742">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["i pediatri di cui al punto '04'."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="a926c59f-b63e-42d4-9b67-a6ec0c413ed7">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Si ricorda che, ai sensi dell'art. 33 dell'ACN 15/12/2005 e smi, come modificato dall'ACN 21/06/2018:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="4734c293-e78e-40e2-b586-d1c1d7e709c8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="4da64422-a3f3-456f-bfa5-82b3aa61966e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["comma 14: il pediatra interpellato deve, a pena di decadenza, dichiarare l'incarico che accetta o rinunciare all'assegnazione;"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="25">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="928147b1-9fc4-4c23-82ed-17349f1ba425">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["•"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="6e63a0f4-2cde-4620-be03-6539fc82bda5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["comma 16: il pediatra già convenzionato per la pediatria di libera scelta, che chiede l'assegnazione della zona carente per trasferimento e che accetta l'incarico relativo, decade dall'incarico di provenienza al momento dell'accettazione, fatto salvo l'obbligo di osservare il preavviso di cui all'art. 19, comma 1, lett. c). la rinuncia o decadenza del nuovo incarico non consente il ripristino dell'incarico di provenienza."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="55">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="35" uuid="8ce824ae-53d1-4a8c-a61f-4b275771570e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="SansSerif" size="11" isBold="true" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">PROCEDURE DI CONVOCAZIONE<br/><br/>Ai sensi dell'art. 92, comma 14, dell'ACN 23/03/2005, come introdotto dall'ACN 21/06/2018,<style isUnderline='true'>la data e la sede di convocazione</style>"+
+"dei candidati sarà comunicata<style isUnderline='true'>esclusivamente</style> mediante pubblicazione sul sito internet di Azienda Zero:<br/>"+
+"<style isUnderline='true'>www.azero.veneto.it</style><br/>nella sezione personale in convenzione<br/><br/>Nessuna comunicazione verrà inviata tramite raccomandata e/o PEC.</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="37">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="2" width="534" height="35" uuid="b28b6881-f9fb-4517-b789-8b70495cfcf5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="SansSerif" size="13" isBold="false" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">"+
+"INFORMATIVA<br/>"+
+"per il trattamento dei dati personali,<br/>"+
+"ai sensi dell’art. 13 del Regolamento Europeo n. 679/2016"+
+"</style>"]]></textFieldExpression>
+				</textField>
+				<break>
+					<reportElement x="0" y="1" width="532" height="1" uuid="480cf4e3-4939-4bce-a5c0-a8f101696b5b"/>
+				</break>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="8c02263f-2772-4811-abdb-aad46e91a924">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">1. Premessa</style><br/>"+
+"Ai sensi dell’art. 13 del Regolamento Europeo n. 679/2016, l’Azienda Zero della Regione Veneto, in qualità di 'Titolare' del trattamento, è tenuta a fornirLe informazioni in merito all’utilizzo dei suoi dati personali.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">2. Identità e dati di contatto del titolare del trattamento</style><br/>"+
+"Il Titolare del trattamento dei dati personali di cui alla presente informativa è l’Azienda Zero della Regione Veneto, con sede a Padova (cap.: 35131) – Passaggio Luigi Gaudenzio, 1. Al fine di semplificare le modalità di inoltro e ridurre i tempi per il riscontro si invita a presentare le richieste di "+
+"cui al paragrafo n. 9, all’Azienda Zero – UOC Gestione Risorse Umane, al seguente indirizzo di posta elettronica certificata (PEC): protocollo.azero@pecveneto.it.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">3. Responsabile della protezione dei dati personali</style><br/>"+
+"L’Azienda Zero ha designato quale Responsabile della protezione dei dati l’avv. Piergiorgio Cervato, dello Studio Legale Cervato Law"+ net.sf.jasperreports.engine.util.JRStringUtil.xmlEncode(" & ") +"Business, con sede a Padova, Via Niccolò Tommaseo n. 78/C.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">4. Soggetti autorizzati al trattamento</style><br/>"+
+"I Suoi dati personali sono trattati da personale interno previamente autorizzato e designato quale incaricato del trattamento, cui sono impartite idonee istruzioni in ordine a misure, accorgimenti, modus operandi, tutti volti alla concreta tutela dei Suo dati personali.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">5. Finalità e base giuridica del trattamento</style><br/>"+
+"Il trattamento dei Suoi dati personali viene effettuato dall’Azienda Zero per gli adempimenti previsti per legge finalizzati alla procedura di assegnazione delle carenze."+
+"<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">6. Destinatari dei dati personali</style><br/>"+
+"I Suoi dati personali saranno oggetto di comunicazione ad altre Pubbliche Amministrazioni per l’effettuazione delle verifiche relative alla veridicità delle dichiarazioni sostitutive ai sensi del D.P.R. 28.12.2000, n. 445, "+
+"nonché per l’acquisizione, ai sensi delle vigenti disposizioni legislative, della documentazione necessaria in caso dell’eventuale instaurazione del rapporto di convenzionamento con le Aziende ULSS della Regione del Veneto.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">7. Trasferimento dei dati personali ai Paesi extra UE</style><br/>"+
+"I Suoi dati personali non sono trasferiti al di fuori dell’Unione Europea.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">8. Periodo di conservazione</style><br/>"+
+"I Suoi dati personali sono conservati per un periodo di 10 anni dalla data del provvedimento di presa d’atto dell’esito del presente procedimento.<br/><br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">9. I Suoi diritti</style><br/>"+
+"Nella Sua qualità di interessato, Lei potrà esercitare i diritti previsti dall’art. 7 del D.Lgs. 196/2003 e degli articoli dal 15 al 22 del Regolamento Europeo n. 679/2016, tra cui il diritto:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="17">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="17" uuid="8321ae00-1c8b-49d1-97f1-e149ec956c3b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" -"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="17" uuid="978d86dd-cc60-443e-b74b-f8d8630f95f1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di accesso ai dati personali"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="17">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="17" uuid="89544d76-f95f-4dde-8c85-05e64679f414">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" -"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="17" uuid="d1f4aa98-4fcf-41e5-9c6a-bf4405f5f5f5">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ottenere la rettifica dei dati personali inesatti"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="16">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="-1" width="30" height="17" uuid="c5e4ed63-3b44-4543-a2a6-21763f1b07df">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" -"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="-1" width="504" height="17" uuid="e0b4bec8-9989-4e2e-acf7-e2d0a78f2eac">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di ottenere la cancellazione dei dati personali qualora non fossero più necessari rispetto alle finalità "+
+"per le quali sono stati raccolti nonché nel caso in cui i dati personali siano stati trattati illecitamente"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="17">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="17" uuid="aa10f1cd-1ca8-4bae-9126-270ea32a5642">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" -"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="17" uuid="0cfa32d1-9900-4f7b-94b5-73c762f3fe3d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di opporsi al trattamento dei propri dati personali"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="17">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="17" uuid="16617612-28e2-4015-b21c-d0b17097856d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="10" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" -"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="17" uuid="9e370548-d9bd-422a-bf51-d83beff96f9a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di proporre reclamo al Garante per la protezione dei dati personali"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="e6db89c2-9210-42f6-a216-647f0e178cb3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<br/>"+
+"    <style pdfFontName=\"Helvetica-Bold\">10. Conferimento dei dati</style><br/>"+
+"Il conferimento dei Suoi dati è necessario per le finalità sopra indicate.<br/>"+
+"Il mancato conferimento comporterà l’esclusione dalla partecipazione al presente procedimento."]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="allegatoA"/>
+	<group name="allegatoB"/>
+	<group name="segueAllegatoB"/>
+	<group name="allegatoC"/>
+	<group name="allegatoD">
+		<groupHeader>
+			<band height="31">
+				<break>
+					<reportElement x="0" y="0" width="534" height="1" uuid="bac591cb-25c5-454a-ae53-82a1c10521d5"/>
+				</break>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="1" width="534" height="30" uuid="dc30a11d-0d5e-4e1b-95eb-90aa0a9e5758">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
+						<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Allegato D"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="35">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="35" uuid="8259359b-6b1c-47d8-b28f-e6019364e2e2">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+						<font fontName="SansSerif" size="11" isBold="false" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">Da compilare, firmare e trasmettere <style isUnderline='true'>obbligatoriamente<br/>"+
+"solo in caso di trasmissione a mezzo PEC (Posta Elettronica Certificata)<br/>"+
+"attenendosi alle indicazioni riportate in calce</style></style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="30">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="30" uuid="6462f341-2af6-40dd-ba3e-4632aa85c770">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom" markup="none">
+						<font fontName="SansSerif" size="13" isBold="true" isUnderline="true"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["DICHIARAZIONE"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="5570dbe7-247d-4786-b32f-dbf066454e8a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="SansSerif" size="11" isBold="false" isItalic="true" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["(ai sensi degli art. 46 e 47 del D.P.R. 28.12.2000, n. 445 e successive modifiche ed integrazioni)"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="21">
+				<componentElement>
+					<reportElement x="0" y="0" width="535" height="21" uuid="1c175d83-65ee-4b42-9b0d-5432477b62f2">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="V_ST_PLS_ALL_D" uuid="74aa7917-f61a-45b5-a7d4-0ac384aa5b0f">
+							<datasetParameter name="cod_domanda">
+								<datasetParameterExpression><![CDATA[$P{cod_domanda}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:column width="535" uuid="18172bf8-2188-4e20-90cc-f1179cc1862b">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonna1"/>
+							<jr:detailCell height="30">
+								<textField isStretchWithOverflow="true">
+									<reportElement x="0" y="0" width="535" height="30" uuid="82ff73a9-10c1-4476-9d7e-4584dc341395"/>
+									<box topPadding="0" leftPadding="0" bottomPadding="5" rightPadding="5"/>
+									<textElement textAlignment="Justified" markup="styled">
+										<font size="11.5"/>
+										<paragraph lineSpacingSize="1.0"/>
+									</textElement>
+									<textFieldExpression><![CDATA["<br/>Il/la sottoscritto/a Dott./ssa <style isUnderline='true'>"+
+($F{DOMA_NOMINATIVO}!=null && !$F{DOMA_NOMINATIVO}.equals("")?$F{DOMA_NOMINATIVO}:"")
++"</style>,nato/a a <style isUnderline='true'>"+
+($F{DOMA_NAS_LUOGO}!=null && !$F{DOMA_NAS_LUOGO}.equals("")?$F{DOMA_NAS_LUOGO}:"")
++"</style>, il <style isUnderline='true'>"+
+($F{DOMA_NAS_DATA}!=null && !$F{DOMA_NAS_DATA}.equals("")?$F{DOMA_NAS_DATA}:"")
++"</style> ,indirizzo pec: <style isUnderline='true'>"+
+($F{DOMA_PEC}!=null && !$F{DOMA_PEC}.equals("")?$F{DOMA_PEC}:"")
++"</style> (intestata al medico che presenta la domanda), in riferimento alla domanda di iscrizione alla graduatoria"+
+" unica regionale del Veneto per la Pediatria di libera scelta dell’anno <style pdfFontName=\"Helvetica-Bold\">"+$F{DOMA_ANNO}+",</style>"]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</band>
+			<band height="30">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="30" uuid="cec5edfa-65b6-4644-9bbb-132e0383b666">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="SansSerif" size="10.5" isBold="true" isUnderline="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["D I C H I A R A"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="3c7e7158-0580-4b7d-9462-e7a4d7862b48">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["sotto la propria responsabilità e consapevole delle sanzioni penali previste, in caso di dichiarazioni non veritiere,<br/>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="2b0715ac-086d-4f8d-ad8c-82187cc75dde">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="8" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="7619b36c-1f62-4ea3-9750-35d50899be12">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di aver assolto al pagamento dell’imposta di bollo di euro 16,00 tramite apposizione ed"+
+" annullamento della marca da bollo sul cartaceo della presente domanda trattenuto"+
+" presso il/la sottoscritto/a; a tal proposito dichiara inoltre che la marca da bollo di euro"+
+" 16,00 applicata è la seguente:"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="21">
+				<componentElement>
+					<reportElement x="0" y="0" width="535" height="21" uuid="99b2d70d-9fd8-443e-ad49-d4896d1dcd72">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+						<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+						<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+						<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="V_ST_PLS_ALL_D" uuid="ee3aeebc-3668-40e1-ac39-40ffe8b3c24e">
+							<datasetParameter name="cod_domanda">
+								<datasetParameterExpression><![CDATA[$P{cod_domanda}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+						<jr:column width="535" uuid="b23d8da9-ab15-4879-9428-4c847a458e27">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonna1"/>
+							<jr:detailCell height="30">
+								<textField isStretchWithOverflow="true">
+									<reportElement x="0" y="0" width="535" height="30" uuid="dd6e532d-1c2b-4b47-b51f-6d5471ffa01a"/>
+									<box topPadding="0" leftPadding="40" bottomPadding="0" rightPadding="5"/>
+									<textElement markup="styled">
+										<font size="11.5"/>
+										<paragraph lineSpacingSize="1.0"/>
+									</textElement>
+									<textFieldExpression><![CDATA["<br/>a. data e ora di emissione: <style isUnderline='true'>"+
+($F{DT_ORA_EMISSIONE}!=null && !$F{DT_ORA_EMISSIONE}.equals("")?$F{DT_ORA_EMISSIONE}:"")
++"</style><br/><br/>"+
+"b. IDENTIFICATIVO n. <style isUnderline='true'>"+
+($F{N_IDENTIFICATIVO}!=null && !$F{N_IDENTIFICATIVO}.equals("")?$F{N_IDENTIFICATIVO}:"")
++"</style><br/>"]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</band>
+			<band height="20">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="30" height="20" uuid="c220137b-8fdf-4d04-8afa-fe6f013dfce8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="8" bottomPadding="0" rightPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="30" y="0" width="504" height="20" uuid="d05b8753-1a38-4ff7-a2e5-55b5eb6841be">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["di conservare l’originale della domanda di cui sopra per eventuali controlli da parte dell’Amministrazione;"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="81">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="25" width="90" height="20" uuid="6d4717d4-3559-456d-adcb-b245e77f8706">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Bottom" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Data "+"<style isUnderline='true'>"+
+new SimpleDateFormat("dd/MM/yyyy").format( new java.util.Date() )
++"</style>"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="310" y="45" width="224" height="20" uuid="4623dd4c-ab70-4fc2-8da6-3d4d4979aadf">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="11.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">"+
+"Firma per esteso e leggibile ( 1 )"+
+"</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="13">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="13" uuid="57726ee4-9d8f-4830-972f-f74c0ed1d80d">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="9.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" ***********************************************************************************************************************************************"+
+"<br/>"+
+"<style isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"NOTA (1):"+
+"</style>"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="13">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="10" height="13" uuid="742f937d-c98a-47ca-83a1-273fd6c4f565">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="9.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["-"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="10" y="0" width="524" height="13" uuid="16cc8f33-a241-4222-baab-4c7624bfff65">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="9.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["NOTE<br/><style size='10'>1. Determinazione delle misure dell'imposta fissa di bollo ai sensi dell'art. 7, comma 3 del D.L. n. 43/2013, convertito in L. n. 71/2013<br/>2. Ai sensi dell'art. 4, comma 4 del D.L. n. 179/2012, convertito in L. n. 221/2012, recante <<Ulteriori misure urgenti per la crescita del Paese>>: 'A decorre dall'1/01/2013, salvo casi in cui è prevista dalla normativa una diversa modalità di comunicazione o di pubblicazione in via telematica, le amministrazioni pubbliche e i gestori o esercenti di pubblici servizi comunicano con il cittadino esclusivamente tramite il domicilio digitale dello stesso dichiarato, senza oneri di spedizione a suo carico'.<br/>3. Dal 1° gennaio 2012 sono entrate in vigore le nuove disposizioni in materia di certificati e di dicihiarazioni sostitutive introdotte dall'art. 15 della L. 12/11/2011, n. 183, recante 'Disposizioni per la formazione del bilancio annuale e pluriennale dello stato (legge di stabilità 2012)' di modifica della disciplina dei certificati e delle dichiarazioni sostitutive contenute nel DPR n. 445/2000 e s.m.i.. A decorrere da tale data i certificati avranno validità solo nei rapporti tra i privati, mentre le ammissioni o i gestori di pubblici servizi non potranno più chiedere o accettare i certificati, che dovranno essere sempre sostituiti da autocertificazioni.<br/>Pertanto, i medici interessati alla domanda di inserimento, non dovranno presentare alcuna certificazione, poiché le dichiarazioni rese contrstualmente alla domanda soddisfano i requisiti previsti dalla vigente normativa.<br/>4. Si rammenta, infine, che, ai sensi dell'art. 76 del DPR n. 445/2000 e smi, in caso di dichiarazioni mendaci si incorre in responsabilità penalmente sansionabili, con la precisazione che, quando i reati sono commessi per nomina ad un pubblico ufficio o l'autorizzazione di una pprofessione o arte, il giudice può applicare, quale pena necessaria, l'interdizione temporanea dei pubblici uffici o della professione.<br/>5. In luogo dell'autenticazione della firma, allegare fotocopia semplice di un documento di identità."]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="29">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="0" width="534" height="20" uuid="8c0c6b5f-c899-4f46-8315-8d460082b2dd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+						<font fontName="SansSerif" size="9.5" isBold="false"/>
+						<paragraph lineSpacingSize="1.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" ***********************************************************************************************************************************************"]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="450" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="534" height="60" uuid="42b4c317-db64-4d68-8bdc-45bcb76fcf3d"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="25" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PLS"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="60" width="534" height="70" uuid="7b3ed499-fdf3-45da-ac7f-38a94e436a8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold=\"true\">DOMANDA DI PARTECIPAZIONE ALLA "+
+"ASSEGNAZIONE DI INCARICHI NEGLI AMBIENTI </style>" +
+"<style isBold=\"true\">TERRITORIALI CARENTI DI "+
+"PEDIATRIA DI LIBERA SCELTA</style><br/>" +
+"<style pdfFontName=\"Helvetica-Oblique\" size='10'>[A.C.N. PER LA "+
+"DISCIPLINA DEI RAPPORTI CON I MEDICI PEDIATRI DI LIBERA<br/></style>"+
+"<style pdfFontName=\"Helvetica-Oblique\" size='10'>SCELTA - ESECUTIVO "+
+"CON INTESA STATO-REGIONI IN DATA 15/12/2005 E smi.]<br/></style>"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="130" width="534" height="45" uuid="3b1da3cd-48b4-43fb-a1ae-c333296475ac">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["PEDIATRIA DI LIBERA SCELTA<br/>"+
+"ANNO "+
+($F{DOMA_ANNO}!=null && !$F{DOMA_ANNO}.equals("")?$F{DOMA_ANNO}:"")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="240" y="165" width="294" height="87" uuid="efb2c942-412e-4afd-9967-fefedfacabc7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" markup="styled">
+					<font fontName="SansSerif" size="13" isBold="true"/>
+					<paragraph lineSpacingSize="0.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["AZIENDA ZERO<br/>"+
+"UOC Gestione Risorse Umane<br/>"+
+"PASSAGGIO LUIGI GAUDENZIO, 1"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="252" width="294" height="19" uuid="c013d894-7fb4-4585-a9a6-02c247cad7f8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="true"/>
+					<paragraph lineSpacingSize="0.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold=\"true\" isUnderline='true' pdfFontName=\"Helvetica-Bold\">"+
+"35131 PADOVA"+
+"</style>"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="271" width="35" height="19" uuid="f5d84a4e-0aae-46f7-b606-d04f4d397f5b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacingSize="0.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">"+
+"PEC: "+
+"</style>"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="271" width="259" height="19" forecolor="#1317F2" uuid="5882a72c-9df3-4cdc-a74e-a21013e1afbf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="13" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacingSize="0.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold=\"true\" pdfFontName=\"Helvetica-Bold\">"+
+"protocollo.azero@pecveneto.it"+
+"</style>"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="290" width="534" height="160" uuid="e18a7b76-c354-4943-a3a0-862708c6df49">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" markup="styled">
+					<font fontName="SansSerif" size="11.5" isBold="false"/>
+					<paragraph lineSpacingSize="1.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Il/La sottoscritto/a Dott./ssa <style isUnderline='true'>"+
+($F{DOMA_NOMINATIVO}!=null && !$F{DOMA_NOMINATIVO}.equals("")?$F{DOMA_NOMINATIVO}:"")+
+"</style> "+
+" nato/a  <style isUnderline='true'>"+
+($F{DOMA_NAS_LUOGO}!=null && !$F{DOMA_NAS_LUOGO}.equals("")?$F{DOMA_NAS_LUOGO}:"")+"</style>"+
+" prov. (<style isUnderline='true'>"+
+($F{DOMA_NAS_PROV}!=null && !$F{DOMA_NAS_PROV}.equals("")?$F{DOMA_NAS_PROV}:"")+"</style>)"+
+" il "+"<style isUnderline='true'>"+
+($F{DOMA_NAS_DATA}!=null && !$F{DOMA_NAS_DATA}.equals("")?$F{DOMA_NAS_DATA}:"")+
+"</style>"+", "+
+($F{DOMA_SESSO}!=null && $F{DOMA_SESSO}.equals("M")?"[X] M ":"[] M ")+
+($F{DOMA_SESSO}!=null && $F{DOMA_SESSO}.equals("F")?"[X] F":"[] F")+",  "+
+($F{DOMA_CODFISC}==null || $F{DOMA_CODFISC}.equals("")?(
+"codice fiscale  |"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"+
+"<style isUnderline='true'>"+"_"+"</style>|"):
+(
+"codice fiscale  |"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(0,1)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(1,2)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(2,3)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(3,4)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(4,5)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(5,6)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(6,7)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(7,8)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(8,9)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(9,10)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(10,11)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(11,12)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(12,13)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(13,14)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(14,15)+"</style>|"+
+"<style isUnderline='true'>"+$F{DOMA_CODFISC}.substring(15,16)+"</style>|")
+
+)+
+"<br/>Comune di residenza "+"<style isUnderline='true'>"+
+($F{DOMA_RESID_LUOGO}!=null && !$F{DOMA_RESID_LUOGO}.equals("")?$F{DOMA_RESID_LUOGO}:"")+
+"</style> "+
+"prov. (<style isUnderline='true'>"+
+($F{DOMA_RESID_PROV}!=null && !$F{DOMA_RESID_PROV}.equals("")?$F{DOMA_RESID_PROV}:"")+
+"</style>)<br/>"+
+"Indirizzo <style isUnderline='true'>"+
+($F{DOMA_RESID_INDIR}!=null && !$F{DOMA_RESID_INDIR}.equals("")?$F{DOMA_RESID_INDIR}:"")+
+"</style>  "+
+"CAP <style isUnderline='true'>"+
+($F{DOMA_RESID_CAP}!=null && !$F{DOMA_RESID_CAP}.equals("")?$F{DOMA_RESID_CAP}:"")+
+"</style><br/>"+
+"Tel. <style isUnderline='true'>"+
+($F{DOMA_RESID_TEL}!=null && !$F{DOMA_RESID_TEL}.equals("")?$F{DOMA_RESID_TEL}:"")+
+"</style>  "+
+"ASL/ULSS di residenza <style isUnderline='true'>"+
+($F{DOMA_ULSS_RESID_AZI}!=null && !$F{DOMA_ULSS_RESID_AZI}.equals("")?$F{DOMA_ULSS_RESID_AZI}:"")+
+"</style><br/>"+
+"Indirizzo email <style isUnderline='true'>"+
+($F{DOMA_MAIL}!=null && !$F{DOMA_MAIL}.equals("")?$F{DOMA_MAIL}:"")+
+"</style><br/>"+
+"PEC <style isUnderline='true'>"+
+($F{DOMA_PEC}!=null && !$F{DOMA_PEC}.equals("")?$F{DOMA_PEC}:"")+
+"</style> "+
+"<style pdfFontName='Helvetica-Oblique'>(intestata al medico che presenta la domanda)</style>"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="200" width="140" height="70" uuid="38fc8607-5e8a-43f5-a2c6-c440a2ccc85d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="SansSerif" size="10" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacingSize="0.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Applicare qui la"+"<br/>"+
+"<style pdfFontName=\"Helvetica-Bold\">"+
+"marca da bollo"+"<br/>"+
+"</style>"+
+"(€ 16,00) secondo le vigenti disposizioni in materia"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="421" y="0" width="97" height="17" uuid="4faaac08-a9e9-47bb-ba5d-94001d9e2fa6"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pag. "+"<style pdfFontName=\"Helvetica-Bold\">"+new String($V{PAGE_NUMBER}.toString())+"</style>"+" a "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="518" y="0" width="16" height="17" uuid="24257ab2-0b2d-4b9d-a34b-b5109a29da14"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style pdfFontName=\"Helvetica-Bold\">"+$V{PAGE_NUMBER}+"</style>"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
